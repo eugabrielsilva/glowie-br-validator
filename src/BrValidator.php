@@ -33,20 +33,20 @@ class BrValidator extends Plugin
      */
     public function register()
     {
-        Validator::setCustomRule('cellphone', Cellphone::class . '::validate');
-        Validator::setCustomRule('cellphone_with_code', CellphoneWithCode::class . '::validate');
-        Validator::setCustomRule('cellphone_with_ddd', CellphoneWithDdd::class . '::validate');
-        Validator::setCustomRule('cep', Cep::class . '::validate');
-        Validator::setCustomRule('cep_with_mask', CepWithMask::class . '::validate');
-        Validator::setCustomRule('cnpj', Cnpj::class . '::validate');
-        Validator::setCustomRule('cnpj_with_mask', CnpjWithMask::class . '::validate');
-        Validator::setCustomRule('cpf', Cpf::class . '::validate');
-        Validator::setCustomRule('cpf_with_mask', CpfWithMask::class . '::validate');
-        Validator::setCustomRule('cpf_or_cnpj', CpfOrCnpj::class . '::validate');
-        Validator::setCustomRule('cpf_or_cnpj_with_mask', CpfOrCnpjWithMask::class . '::validate');
-        Validator::setCustomRule('phone', Phone::class . '::validate');
-        Validator::setCustomRule('phone_with_code', PhoneWithCode::class . '::validate');
-        Validator::setCustomRule('phone_with_ddd', PhoneWithDdd::class . '::validate');
-        Validator::setCustomRule('uf', Uf::class . '::validate');
+        Validator::setCustomRule('cellphone', [Cellphone::class, 'validate']);
+        Validator::setCustomRule('cellphone_with_code', [CellphoneWithCode::class, 'validate']);
+        Validator::setCustomRule('cellphone_with_ddd', [CellphoneWithDdd::class, 'validate']);
+        Validator::setCustomRule('cep', [Cep::class, 'validate']);
+        Validator::setCustomRule('cep_with_mask', [CepWithMask::class, 'validate']);
+        Validator::setCustomRule('cnpj', [Cnpj::class, 'validate']);
+        Validator::setCustomRule('cnpj_with_mask', [CnpjWithMask::class, 'validate']);
+        Validator::setCustomRule('cpf', [Cpf::class, 'validate']);
+        Validator::setCustomRule('cpf_with_mask', [CpfWithMask::class, 'validate']);
+        Validator::setCustomRule('cpf_or_cnpj', [CpfOrCnpj::class, 'validate']);
+        Validator::setCustomRule('cpf_or_cnpj_with_mask', [CpfOrCnpjWithMask::class, 'validate']);
+        Validator::setCustomRule('phone', [Phone::class, 'validate']);
+        Validator::setCustomRule('phone_with_code', [PhoneWithCode::class, 'validate']);
+        Validator::setCustomRule('phone_with_ddd', [PhoneWithDdd::class, 'validate']);
+        Validator::setCustomRule('uf', [Uf::class, 'validate']);
     }
 }
