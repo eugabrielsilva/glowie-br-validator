@@ -2,13 +2,24 @@
 
 namespace Glowie\Plugins\BrValidator\Rules;
 
+/**
+ * Regra de validação de CNPJ.
+ * @author Gabriel Silva
+ * @package eugabrielsilva/glowie-br-validator
+ * @license MIT
+ */
 class Cnpj implements Rule
 {
+    /**
+     * Validar o dado.
+     * @param mixed $value Dado a ser validado.
+     * @return bool Retorna true para válido, false para inválido.
+     */
     public static function validate($value)
     {
         if (!isset($value) || !is_string($value)) return false;
         $cnpj = preg_replace('/[^0-9]/', '', $value);
-        if (strlen($cnpj) !== 14) return false;
+        if (mb_strlen($cnpj) !== 14) return false;
         if (preg_match('/(\d)\1{13}/', $cnpj)) return false;
         $soma1 = 0;
         $peso1 = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];

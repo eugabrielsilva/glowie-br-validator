@@ -2,6 +2,23 @@
     "name": "eugabrielsilva/glowie-br-validator",
     "description": "Plugin para validações PT-BR no Glowie Framework",
     "license": "MIT",
+    "keywords": [
+        "glowie",
+        "brasil",
+        "pt-br"
+    ],
+    "homepage": "https://gabrielsilva.dev.br",
+    "support": {
+        "issues": "https://github.com/eugabrielsilva/glowie-br-validator/issues",
+        "source": "https://github.com/eugabrielsilva/glowie-br-validator"
+    },
+    "authors": [
+        {
+            "name": "Gabriel Silva",
+            "email": "contato@gabrielsilva.dev.br",
+            "homepage": "https://gabrielsilva.dev.br"
+        }
+    ],
     "require": {
         "glowieframework/glowie-core": "*"
     },
@@ -9,5 +26,7 @@
         "psr-4": {
             "Glowie\\Plugins\\BrValidator\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

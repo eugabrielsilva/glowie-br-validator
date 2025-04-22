@@ -3,12 +3,12 @@
 namespace Glowie\Plugins\BrValidator\Rules;
 
 /**
- * Regra de validação de telefone com DDD e código do país.
+ * Regra de validação de CNPJ com máscara.
  * @author Gabriel Silva
  * @package eugabrielsilva/glowie-br-validator
  * @license MIT
  */
-class PhoneWithCode implements Rule
+class CnpjWithMask implements Rule
 {
     /**
      * Validar o dado.
@@ -18,7 +18,7 @@ class PhoneWithCode implements Rule
     public static function validate($value)
     {
         if (!isset($value) || !is_string($value)) return false;
-        $pattern = '/^\+\d{1,3}\s?\(\d{2}\)\s?\d{4}-\d{4}$/';
-        return preg_match($pattern, $value) === 1;
+        $pattern = '/^\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}$/';
+        return preg_match($pattern, $value) === 1 && Cnpj::validate($value);
     }
 }
