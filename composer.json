@@ -1,0 +1,13 @@
+{
+    "name": "eugabrielsilva/glowie-br-validator",
+    "description": "Plugin para validações PT-BR no Glowie Framework",
+    "license": "MIT",
+    "require": {
+        "glowieframework/glowie-core": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Glowie\\Plugins\\BrValidator\\": "src/"
+        }
+    }
+}
