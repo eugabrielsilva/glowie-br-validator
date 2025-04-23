@@ -5,9 +5,10 @@
     "keywords": [
         "glowie",
         "brasil",
-        "pt-br"
+        "pt-br",
+        "validation"
     ],
-    "homepage": "https://gabrielsilva.dev.br",
+    "homepage": "https://glowie.gabrielsilva.dev.br",
     "support": {
         "issues": "https://github.com/eugabrielsilva/glowie-br-validator/issues",
         "source": "https://github.com/eugabrielsilva/glowie-br-validator"
@@ -15,8 +16,8 @@
     "authors": [
         {
             "name": "Gabriel Silva",
-            "email": "contato@gabrielsilva.dev.br",
-            "homepage": "https://gabrielsilva.dev.br"
+            "email": "glowie@gabrielsilva.dev.br",
+            "homepage": "https://glowie.gabrielsilva.dev.br"
         }
     ],
     "require": {
